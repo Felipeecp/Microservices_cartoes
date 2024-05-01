@@ -1,6 +1,5 @@
 package io.github.felipeecp.mscloudgateway;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -22,6 +21,7 @@ public class MsCloudGatewayApplication {
                 .routes()
                 .route(r -> r.path("/clientes/**").uri("lb://msclientes"))
                 .route((r -> r.path("/cartoes/**").uri("lb://mscartoes")))
+                .route(r -> r.path("/avaliacoes-credito/**").uri("lb://msavaliadorcredito"))
                 .build();
     }
 }

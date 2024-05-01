@@ -1,7 +1,7 @@
 package io.github.felipeecp.mscartoes.application;
 
 import io.github.felipeecp.mscartoes.domain.Cartao;
-import io.github.felipeecp.mscartoes.infra.repository.CartaRepository;
+import io.github.felipeecp.mscartoes.infra.repository.CartaoRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CartaoService {
 
-    private final CartaRepository repository;
+    private final CartaoRepository repository;
 
     @Transactional
     public Cartao save(Cartao cartao) {

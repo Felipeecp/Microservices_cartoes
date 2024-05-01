@@ -40,8 +40,8 @@ public class ClienteController {
         return ResponseEntity.created(headerLocation).build();
     }
 
-    @GetMapping
-    public ResponseEntity<Cliente> dadosCliente(String cpf){
+    @GetMapping(params = "cpf")
+    public ResponseEntity<Cliente> dadosCliente(@RequestParam("cpf") String cpf){
         var cliente = clienteService.getByCPF(cpf);
         if(cliente.isEmpty()){
             return ResponseEntity.notFound().build();

@@ -1,4 +1,4 @@
-package io.github.felipeecp.mscartoes.domain;
+package io.github.felipeecp.msavaliadorcredito.domain.model;
 
 import lombok.Data;
 
